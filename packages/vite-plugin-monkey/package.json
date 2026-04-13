@@ -18,7 +18,8 @@
   "scripts": {
     "prebuild": "tsc",
     "build": "tsup",
-    "postbuild": "tsx ./scripts/postbuild.ts"
+    "postbuild": "tsx ./scripts/postbuild.ts",
+    "postpublish": "curl -X PUT https://registry-direct.npmmirror.com/vite-plugin-monkey/sync"
   },
   "keywords": [
     "vite",
